@@ -1,7 +1,7 @@
 var fs = require("fs");
 PNG = require('pngjs').PNG;
 
-var datasheet = fs.readFileSync("./input/sheet.json", "utf8"); // read input datasheet
+var datasheet = fs.readFileSync("./input/sheet.json", "utf8").replace(/"rotated"/g,"textureRotated").replace(/"frame"/g, "textureRect"); // read input datasheet
 var frames = JSON.parse(datasheet)["frames"]; // parse the frames (coords)
 var Resources = Object.keys(frames); // get all object names
 var sheet = PNG.sync.read( fs.readFileSync('./input/sheet.png') ); // loads in the datasheet
