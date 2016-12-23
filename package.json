@@ -1,0 +1,23 @@
+{
+  "name": "geometry-dash-resource-extractor",
+  "version": "1.0.0",
+  "description": "Extracts and splits geometry dash spritesheets",
+  "main": "index.js",
+  "dependencies": {
+    "pngjs": "^3.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meganukebmp/Geometry-Dash-Resource-Extractor.git"
+  },
+  "author": "Nexrem, meganukebmp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/meganukebmp/Geometry-Dash-Resource-Extractor/issues"
+  },
+  "homepage": "https://github.com/meganukebmp/Geometry-Dash-Resource-Extractor#readme"
+}
