@@ -4,6 +4,7 @@
   "description": "Extracts and splits geometry dash spritesheets",
   "main": "index.js",
   "dependencies": {
+    "plist": "^2.0.1",
     "pngjs": "^3.0.0"
   },
   "devDependencies": {},
