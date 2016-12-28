@@ -21,7 +21,15 @@ if ( inputFiles[0].includes(".plist") && inputFiles.indexOf(inputFiles[0].replac
 }
 
 function start(file) {
-  var datasheet = fs.readFileSync("./input/" + file + ".plist", "utf8").replace(/"rotated"/g,'"textureRotated"').replace(/"frame"/g, '"textureRect"'); // read input datasheet
+  // read input datasheet
+  var datasheet = fs.readFileSync("./input/" + file + ".plist", "utf8")
+    .replace(/>rotated</g,'>textureRotated<')
+    .replace(/>frame</g, '>textureRect<')
+    .replace(/>offset</g, '>spriteOffset<')
+	.replace(/player_ball/g, "ball");
+	
+	fs.writeFileSync("aa.json", datasheet);
+
   frames = plist.parse(datasheet)["frames"]; // parse the frames (coords)
   Resources = Object.keys(frames); // get all object names
   sheet = PNG.sync.read( fs.readFileSync('./input/' + file + ".png") ); // loads in the datasheet
